@@ -13,7 +13,7 @@ class App extends Component {
           />
         </header>
         <p className="App-intro">
-          Welcome! Click on the chat icon to start asking questions!
+          This is proof-of-concept for a smart civic resource interface.
           <br />
           <br />
           <br />
