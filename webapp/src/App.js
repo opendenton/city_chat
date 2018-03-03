@@ -1,24 +1,22 @@
 import React, { Component } from 'react'
+import { Widget, addResponseMessage } from 'react-chat-widget'
 import './App.css'
 
 class App extends Component {
+  handleNewUserMessage = msg => {
+    addResponseMessage('Ok!')
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img
-            src="assets/images/logo@2x.png"
-            className="App-logo"
-            alt="logo"
-          />
-        </header>
-        <p className="App-intro">
-          This is proof-of-concept for a smart civic resource interface.
-          <br />
-          <br />
-          <br />
-          Oh, you can only ask one question (for now.)
-        </p>
+        <Widget
+          title="Hello"
+          subtitle="Welcome to City Chat"
+          senderPlaceHolder="Ask a question..."
+          showCloseButton={true}
+          handleNewUserMessage={this.handleNewUserMessage}
+        />
       </div>
     )
   }
